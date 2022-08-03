@@ -1,0 +1,101 @@
+.weather-app {
+    border: 1px solid black;
+    border-radius: 20px;
+    display: block;
+    max-width: 900px;
+    margin: 50px auto 50px auto;
+    padding: 20px 20px 0 20px;
+    background: radial-gradient(
+      circle at 10% 20%,
+      rgb(255, 246, 236) 39.5%,
+      rgba(100, 46, 122, 0.23) 100.2%
+    );
+  }
+  .container-fovorite-city {
+    width: 400px;
+  }
+  .col:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .container-search-city {
+    margin: 30px auto;
+  }
+  .city-now {
+    text-align: center;
+    line-height: 1.5em;
+  }
+  .currently-city {
+    font-family: "DM Serif Display", serif;
+    font-size: 25px;
+    text-transform: capitalize;
+  }
+  .more-information {
+    line-height: 2.2em;
+  }
+  ul {
+    list-style-type: none;
+  }
+  .information-city {
+    text-align: justify;
+  }
+  .currently-character-1 {
+    display: inline-block;
+    text-align: left;
+    padding: 0 50px 0 10px;
+  }
+  .weather-image-2 {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 10px;
+  }
+  .next-days-3 {
+    display: inline-block;
+    padding: 0 10px 0 10px;
+    vertical-align: top;
+    text-align: left;
+    justify-content: space-around;
+  }
+  li {
+    border: 1px solid black;
+    border-radius: 60px;
+    padding: 10px 10px;
+    margin: 10px;
+    background: rgb(248, 217, 248);
+    text-align: center;
+    word-spacing: 4px;
+  }
+  .col {
+    display: inline-block;
+    margin-left: 30px;
+  }
+  .enter-your-city {
+    width: 40%;
+    margin-right: 10px;
+    border-radius: 60px;
+    padding: 5px 15px;
+    font-size: 18px;
+  }
+  .button {
+    margin: 0 5px;
+    border-radius: 60px;
+    border: 2px solid rgba(0, 0, 0, 0.616);
+    padding: 3px 10px;
+    font-size: 18px;
+    background: rgb(248, 217, 248);
+  }
+  .button:hover {
+    cursor: pointer;
+    font-size: 20px;
+    border: 2px solid rgba(236, 231, 231, 0.616);
+  }
+  #temp-celsius:hover,
+  #temp-fahrenheit:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  #temp-celsius:active,
+  #temp-fahrenheit:active {
+    color: palevioletred;
+  }
+  
