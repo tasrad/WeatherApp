@@ -35,6 +35,9 @@ function searchInputWeather(response) {
   descriptionElement.innerHTML = response.data.weather[0].description;
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed)
+  let pressureElement = document.querySelector("#pressure");
+  pressureElement.innerHTML = response.data.main.pressure;
+  
 }
 
 function searchCityName(cityName) {
