@@ -31,6 +31,8 @@ function searchInputWeather(response) {
   let correctTemp = Math.round(response.data.main.temp);
   let showTemp = document.querySelector("#current-temp");
   showTemp.innerHTML = `${correctTemp}`;
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
 
 function searchCityName(cityName) {
