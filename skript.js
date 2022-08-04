@@ -40,7 +40,7 @@ function searchInputWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
   let feelsLikeElement = document.querySelector("#feels-like");
-  feelsLikeElement.innerHTML = response.data.main.feels_like;
+  feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
 }
 
 function searchCityName(cityName) {
@@ -66,10 +66,19 @@ function viewTempPoint(response) {
   let correctTemp = Math.round(response.data.main.temp);
   let windowTemp = document.querySelector("#current-temp");
   windowTemp.innerHTML = `${correctTemp}`;
-
   let correctCity = response.data.name;
   let windowCity = document.querySelector("#city-search");
   windowCity.innerHTML = `${correctCity}`;
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed)
+  let pressureElement = document.querySelector("#pressure");
+  pressureElement.innerHTML = response.data.main.pressure;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
+  let feelsLikeElement = document.querySelector("#feels-like");
+  feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
 }
 
 function viewPosition(position) {
