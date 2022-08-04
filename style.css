@@ -98,4 +98,7 @@
   #temp-fahrenheit:active {
     color: palevioletred;
   }
-  
+.discription{
+  display: block;
+  margin: 0 auto;
+}  
