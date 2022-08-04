@@ -103,5 +103,7 @@
   margin: 0 auto;
   max-width: 900px;
   text-align: left;
-  text-decoration: none;
 }  
+.link-to-github{
+  text-decoration: none;
+}
