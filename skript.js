@@ -106,4 +106,4 @@ let clickCurrent = document.querySelector("#current-button");
 clickCurrent.addEventListener("click", eventButtonCurrent);
 
 
-daysAndTime(timestamp);
+daysAndTime();
