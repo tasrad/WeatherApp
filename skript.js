@@ -1,5 +1,6 @@
 // Current Day and Times
-let now = new Date();
+function daysAndTime(timestamp){
+  let now = new Date(timestamp);
 let days = [
   "Sunday",
   "Monday",
@@ -24,6 +25,7 @@ currentMinutesAdd.innerHTML = `${currentMinutes}`;
 if (currentMinutes < 10){
   currentMinutes = `0 &{currentMinutes}`;
 }
+}
 
 // Event Button Search
 function searchInputWeather(response) {
@@ -40,6 +42,7 @@ function searchInputWeather(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   let feelsLikeElement = document.querySelector("#feels-like");
   feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
+  daysAndTime();
 }
 
 function searchCityName(cityName) {
@@ -78,6 +81,7 @@ function viewTempPoint(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   let feelsLikeElement = document.querySelector("#feels-like");
   feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
+  daysAndTime();
 }
 
 function viewPosition(position) {
