@@ -26,6 +26,7 @@ if (currentMinutes < 10){
   currentMinutes = `0 &{currentMinutes}`;
 }
 }
+daysAndTime();
 
 // Event Button Search
 function searchInputWeather(response) {
@@ -106,4 +107,3 @@ let clickCurrent = document.querySelector("#current-button");
 clickCurrent.addEventListener("click", eventButtonCurrent);
 
 
-daysAndTime();
