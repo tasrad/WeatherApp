@@ -43,6 +43,10 @@ function searchInputWeather(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   let feelsLikeElement = document.querySelector("#feels-like");
   feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  )
   
 }
 
