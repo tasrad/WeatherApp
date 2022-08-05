@@ -1,6 +1,6 @@
 // Current Day and Times
-function daysAndTime(timestamp){
-  let now = new Date(timestamp);
+function daysAndTime(){
+  let now = new Date();
 let days = [
   "Sunday",
   "Monday",
