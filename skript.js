@@ -1,6 +1,5 @@
-// Current Day
+// Current Day and Times
 let now = new Date();
-
 let days = [
   "Sunday",
   "Monday",
@@ -11,20 +10,20 @@ let days = [
   "Saturday"
 ];
 let currentDay = days[now.getDay()];
-
 let currentDayAdd = document.querySelector("#current-day");
 currentDayAdd.innerHTML = `${currentDay}`;
-
-// Current Hours
 let currentHours = now.getHours();
 let currentHoursAdd = document.querySelector("#current-hour");
 currentHoursAdd.innerHTML = `${currentHours}`;
-
-// Current Minutes
+if (currentHours < 10){
+  currentHours = `0 &{currentHours}`
+};
 let currentMinutes = now.getMinutes();
-
 let currentMinutesAdd = document.querySelector("#current-minutes");
 currentMinutesAdd.innerHTML = `${currentMinutes}`;
+if (currentMinutes < 10){
+  currentMinutes = `0 &{currentMinutes}`;
+}
 
 // Event Button Search
 function searchInputWeather(response) {
