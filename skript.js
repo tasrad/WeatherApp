@@ -42,7 +42,7 @@ function searchInputWeather(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   let feelsLikeElement = document.querySelector("#feels-like");
   feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
-  daysAndTime(timestamp);
+  
 }
 
 function searchCityName(cityName) {
@@ -81,7 +81,7 @@ function viewTempPoint(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   let feelsLikeElement = document.querySelector("#feels-like");
   feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
-  daysAndTime(timestamp);
+  
 }
 
 function viewPosition(position) {
@@ -104,3 +104,6 @@ function eventButtonCurrent(event) {
 
 let clickCurrent = document.querySelector("#current-button");
 clickCurrent.addEventListener("click", eventButtonCurrent);
+
+
+daysAndTime(timestamp);
