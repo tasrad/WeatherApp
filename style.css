@@ -5,11 +5,7 @@
     max-width: 900px;
     margin: 50px auto 5px auto;
     padding: 20px 20px 20px 20px;
-    background: radial-gradient(
-      circle at 10% 20%,
-      rgb(255, 246, 236) 39.5%,
-      rgba(100, 46, 122, 0.23) 100.2%
-    );
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
   }
   .container-fovorite-city {
     width: 400px;
@@ -43,12 +39,12 @@
   .currently-character-1 {
     display: inline-block;
     text-align: left;
-    padding: 0 50px 0 10px;
+    padding: 0 100px 0 10px;
   }
   .weather-image-2 {
     display: inline-block;
     vertical-align: top;
-    padding: 0 10px;
+    padding: 0 30px;
   }
   .next-days-3 {
     display: inline-block;
@@ -62,13 +58,17 @@
     border-radius: 60px;
     padding: 10px 10px;
     margin: 10px;
-    background: rgb(248, 217, 248);
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
     text-align: center;
     word-spacing: 4px;
   }
+  li:hover{
+    cursor: pointer;
+    border: 2px solid rgba(236, 231, 231, 0.616);
+  }
   .col {
     display: inline-block;
-    margin-left: 30px;
+    margin-right: 10px;
   }
   .enter-your-city {
     width: 40%;
@@ -83,7 +83,7 @@
     border: 2px solid rgba(0, 0, 0, 0.616);
     padding: 3px 10px;
     font-size: 18px;
-    background: rgb(248, 217, 248);
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
   }
   .button:hover {
     cursor: pointer;
