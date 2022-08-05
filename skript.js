@@ -42,7 +42,7 @@ function searchInputWeather(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   let feelsLikeElement = document.querySelector("#feels-like");
   feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
-  axios.get(apiUrl).then(daysAndTime());
+  daysAndTime(timestamp);
 }
 
 function searchCityName(cityName) {
@@ -81,7 +81,7 @@ function viewTempPoint(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   let feelsLikeElement = document.querySelector("#feels-like");
   feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
-  axios.get(apiUrl).then(daysAndTime());
+  daysAndTime(timestamp);
 }
 
 function viewPosition(position) {
