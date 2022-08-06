@@ -69,6 +69,8 @@ function eventButton(event) {
 let clickButton = document.querySelector("#search-button");
 clickButton.addEventListener("click", eventButton);
 
+
+
 // Button Current
 function viewTempPoint(response) {
   console.log(response.data);
@@ -120,3 +122,4 @@ let clickCurrent = document.querySelector("#current-button");
 clickCurrent.addEventListener("click", eventButtonCurrent);
 
 
+searchCityName("Kyiv")

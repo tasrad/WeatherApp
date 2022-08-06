@@ -5,7 +5,7 @@
     max-width: 900px;
     margin: 50px auto 5px auto;
     padding: 20px 20px 20px 20px;
-    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    background: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
   }
   .container-fovorite-city {
     width: 400px;
@@ -21,6 +21,10 @@
     text-align: left;
     line-height: 2em;
     text-transform: capitalize;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+    padding: 5px 10px;
   }
   .currently-city {
     font-family: "DM Serif Display", serif;
@@ -29,7 +33,16 @@
   }
   .more-information {
     line-height: 2em;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+    padding: 5px 10px;
+    margin-top: 10px;
   }
+.temp{
+  font-size: x-large
+}
+
   ul {
     list-style-type: none;
   }
@@ -58,13 +71,14 @@
     border-radius: 60px;
     padding: 10px 10px;
     margin: 10px;
-    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    background: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
     text-align: center;
     word-spacing: 4px;
   }
   li:hover{
     cursor: pointer;
-    border: 2px solid rgba(236, 231, 231, 0.616);
+    border: 1px solid rgba(236, 231, 231, 0.616);
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
   }
   .col {
     display: inline-block;
@@ -94,10 +108,7 @@
     cursor: pointer;
     text-decoration: underline;
   }
-  #temp-celsius:active,
-  #temp-fahrenheit:active {
-    color: palevioletred;
-  }
+
 .discription{
   display: block;
   margin: 0 auto;
