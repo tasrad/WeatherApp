@@ -33,6 +33,9 @@ function searchInputWeather(response) {
   let correctTemp = Math.round(response.data.main.temp);
   let showTemp = document.querySelector("#current-temp");
   showTemp.innerHTML = `${correctTemp}`;
+  let correctCity = response.data.name;
+  let windowCity = document.querySelector("#city-search");
+  windowCity.innerHTML = `${correctCity}`;
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
   let windElement = document.querySelector("#wind");
@@ -57,6 +60,7 @@ function searchCityName(cityName) {
   axios.get(apiUrl).then(searchInputWeather);
 }
 
+
 function eventButton(event) {
   event.preventDefault();
   let searchCity = document.querySelector("#search-city-input");
@@ -65,6 +69,8 @@ function eventButton(event) {
   let cityName = document.querySelector("#search-city-input").value;
   searchCityName(cityName);
 }
+
+
 
 let clickButton = document.querySelector("#search-button");
 clickButton.addEventListener("click", eventButton);
@@ -111,7 +117,7 @@ appid=${apiKey}&units=${unit}`;
   axios.get(apiUrl).then(viewTempPoint);
 }
 
-navigator.geolocation.getCurrentPosition(viewPosition);
+
 
 function eventButtonCurrent(event) {
   event.preventDefault();

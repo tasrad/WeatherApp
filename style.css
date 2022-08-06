@@ -19,12 +19,12 @@
   }
   .city-now {
     text-align: left;
-    line-height: 2em;
+    line-height: 1.8em;
     text-transform: capitalize;
     border: 1px solid black;
     border-radius: 20px;
     background: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
-    padding: 5px 10px;
+    padding: 5px;
   }
   .currently-city {
     font-family: "DM Serif Display", serif;
