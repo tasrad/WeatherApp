@@ -133,6 +133,8 @@ clickCurrent.addEventListener("click", eventButtonCurrent);
 
 function showTempFahrenheit(event){
   event.preventDefault();
+  clickTempFahrenheit.classList.add("active");
+  clickTempCelcius.classList.remove("active");
   let currentTempFahrenheit = Math.round((celsiusTemperature * 9)/5 + 32)
   let windowTempFahrenheit = document.querySelector("#current-temp");
   windowTempFahrenheit.innerHTML = currentTempFahrenheit;
@@ -145,6 +147,8 @@ clickTempFahrenheit.addEventListener("click",showTempFahrenheit );
 
 function showTempCelsius(event){
   event.preventDefault();
+  clickTempCelcius.classList.add("active");
+  clickTempFahrenheit.classList.remove("active");
   let windowTempCelcius = document.querySelector("#current-temp");
   windowTempCelcius.innerHTML = Math.round(celsiusTemperature)
 }
