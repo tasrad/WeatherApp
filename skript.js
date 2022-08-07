@@ -80,8 +80,8 @@ clickButton.addEventListener("click", eventButton);
 
 // Button Current
 function viewTempPoint(response) {
-  console.log(response.data);
-  let correctTemp = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp
+  let correctTemp = Math.round(celsiusTemperature);
   let windowTemp = document.querySelector("#current-temp");
   windowTemp.innerHTML = `${correctTemp}`;
   let correctCity = response.data.name;
@@ -141,7 +141,17 @@ function showTempFahrenheit(event){
 let celsiusTemperature = null;
 
 let clickTempFahrenheit = document.querySelector("#temp-fahrenheit");
-clickTempFahrenheit.addEventListener("click",showTempFahrenheit )
+clickTempFahrenheit.addEventListener("click",showTempFahrenheit );
+
+function showTempCelsius(event){
+  event.preventDefault();
+  let windowTempCelcius = document.querySelector("#current-temp");
+  windowTempCelcius.innerHTML = Math.round(celsiusTemperature)
+}
+
+
+let clickTempCelcius = document.querySelector("#temp-celsius");
+clickTempCelcius.addEventListener("click",showTempCelsius);
 
 
 searchCityName("Kyiv")
