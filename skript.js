@@ -30,7 +30,8 @@ daysAndTime();
 
 // Event Button Search
 function searchInputWeather(response) {
-  let correctTemp = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp
+  let correctTemp = Math.round(celsiusTemperature);
   let showTemp = document.querySelector("#current-temp");
   showTemp.innerHTML = `${correctTemp}`;
   let correctCity = response.data.name;
@@ -126,6 +127,21 @@ function eventButtonCurrent(event) {
 
 let clickCurrent = document.querySelector("#current-button");
 clickCurrent.addEventListener("click", eventButtonCurrent);
+
+
+
+
+function showTempFahrenheit(event){
+  event.preventDefault();
+  let currentTempFahrenheit = Math.round((celsiusTemperature * 9)/5 + 32)
+  let windowTempFahrenheit = document.querySelector("#current-temp");
+  windowTempFahrenheit.innerHTML = currentTempFahrenheit;
+}
+
+let celsiusTemperature = null;
+
+let clickTempFahrenheit = document.querySelector("#temp-fahrenheit");
+clickTempFahrenheit.addEventListener("click",showTempFahrenheit )
 
 
 searchCityName("Kyiv")
