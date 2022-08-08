@@ -28,6 +28,43 @@ if (currentMinutes < 10){
 }
 daysAndTime();
 
+
+// Forecast Weather 7 days
+function displayForecast(){
+  let forecastElement = document.querySelector("#next-days-3");
+  let days = ["Mon", "Tue","Wed", "Thu", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function(day) {
+    forecastHTML= forecastHTML + 
+    `
+    <div class="col-auto">
+
+    <div class = "forecast-day"> ${day} </div>
+    <div class="weather-forecast-temperatures">
+    <span class="weather-forecast-temperature-max"> 18° </span>
+     <img
+     src="http://openweathermap.org/img/wn/50d@2x.png"
+     alt=""
+     width="15"
+   />
+   <span class="weather-forecast-temperature-min"> 12° </span>
+   </div>
+
+    </div>
+    `
+   });
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
+
+
+
+
 // Event Button Search
 function searchInputWeather(response) {
   celsiusTemperature = response.data.main.temp
@@ -158,4 +195,5 @@ let clickTempCelcius = document.querySelector("#temp-celsius");
 clickTempCelcius.addEventListener("click",showTempCelsius);
 
 
-searchCityName("Kyiv")
+searchCityName("Kyiv");
+displayForecast();
