@@ -5,7 +5,7 @@
     max-width: 900px;
     margin: 50px auto 5px auto;
     padding: 20px 20px 20px 20px;
-    background: #f9fbfc; 
+     background: rgb(205, 216, 222);
     box-shadow: 5px 5px 10px #f9fbfc;
     
   }
@@ -21,25 +21,32 @@
   }
   .city-now {
     text-align: left;
-    line-height: 1.8em;
+    line-height: 2.5em;
     text-transform: capitalize;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 20px;
-    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
-    padding: 5px;
+    background: white;
+    padding: 10px;
+    margin: 10px;
   }
   .currently-city {
+    display: inline-block;
     font-family: "DM Serif Display", serif;
     font-size: 25px;
     text-transform: capitalize;
   }
   .more-information {
-    line-height: 2em;
-    border: 1px solid black;
+    display: inline-block;
+    line-height: 2.5em;
+    border: 1px solid white;
     border-radius: 20px;
-    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
-    padding: 5px 10px;
-    margin-top: 10px;
+    background: white;
+    padding: 10px;
+    margin: 10px;
+    vertical-align: center;
+  }
+  .day-time-temp{
+    margin: 0;
   }
 .temp-weather{
   font-size: x-large
@@ -47,6 +54,7 @@
 
   ul {
     list-style-type: none;
+    margin: 10px;
   }
   .information-city {
     text-align: justify;
@@ -54,33 +62,32 @@
   .currently-character-1 {
     display: inline-block;
     text-align: left;
-    padding: 0 100px 0 10px;
+    padding:10px;
   }
   .weather-image-2 {
     display: inline-block;
     vertical-align: top;
-    padding: 0 30px;
+    
   }
   .next-days-3 {
     display: inline-block;
-    padding: 0 10px 0 10px;
+    padding: 10px;
     vertical-align: top;
     text-align: left;
     justify-content: space-around;
   }
   li {
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 60px;
     padding: 10px 10px;
     margin: 10px;
-    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    background: white;
     text-align: center;
     word-spacing: 4px;
   }
   li:hover{
     cursor: pointer;
     border: 1px solid rgba(236, 231, 231, 0.616);
-    background: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
   }
   .col {
     display: inline-block;
@@ -104,7 +111,7 @@
   .button:hover {
     cursor: pointer;
     border: 2px solid rgba(236, 231, 231, 0.616);
-    background: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+    background: white;
   }
  
   #temp-celsius.active,
