@@ -113,11 +113,17 @@
     border: 2px solid rgba(236, 231, 231, 0.616);
     background: white;
   }
- 
+  #temp-celsius:hover,
+  #temp-fahrenheit:hover{
+    cursor: pointer;
+  }
+
   #temp-celsius.active,
   #temp-fahrenheit.active {
 color: blueviolet;
 cursor: default;
+
+
   }
   #temp-celsius.active:hover,
   #temp-fahrenheit.active:hover {
