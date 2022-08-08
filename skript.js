@@ -31,31 +31,40 @@ daysAndTime();
 
 // Forecast Weather 7 days
 function displayForecast(){
-  let forecastElement = document.querySelector("#next-days-3");
-  let days = ["Mon", "Tue","Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Sunday",
+  "Monday",
+  "Tuersday",
+  "Wednesday",
+  "Thusday",
+  "Friday",
+  "Saturday"];
 
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<ul class="day">`;
   days.forEach(function(day) {
-    forecastHTML= forecastHTML + 
+    forecastHTML=  
+    forecastHTML + 
     `
-    <div class="col-auto">
+    <li class="forecast-day">
 
-    <div class = "forecast-day"> ${day} </div>
-    <div class="weather-forecast-temperatures">
+    <span class = "forecast-day"> ${day} </span>
+
+    <span class="weather-forecast-temperatures">
     <span class="weather-forecast-temperature-max"> 18° </span>
+    <span class="image">
      <img
      src="http://openweathermap.org/img/wn/50d@2x.png"
      alt=""
-     width="15"
+     width="35"
    />
+   </span>
    <span class="weather-forecast-temperature-min"> 12° </span>
-   </div>
-
-    </div>
-    `
+   </span>
+    </li>
+    `;
    });
 
-  forecastHTML = forecastHTML + `</div>`;
+  forecastHTML = forecastHTML + `</ul>`;
 
   forecastElement.innerHTML = forecastHTML;
   console.log(forecastHTML);
@@ -141,7 +150,6 @@ function viewTempPoint(response) {
   iconElement.setAttribute(
     "alt", response.data.weather[0].description
   )
-  
 }
 
 function viewPosition(position) {
