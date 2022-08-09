@@ -15,18 +15,18 @@ let currentDayAdd = document.querySelector("#current-day");
 currentDayAdd.innerHTML = `${currentDay}`;
 let currentHours = now.getHours();
 let currentHoursAdd = document.querySelector("#current-hour");
+
+currentHoursAdd.innerHTML = `${currentHours}`;
 if (currentHours < 10){
   currentHours = `0 &{currentHours}`
 };
-currentHoursAdd.innerHTML = `${currentHours}`;
-
 let currentMinutes = now.getMinutes();
 let currentMinutesAdd = document.querySelector("#current-minutes");
+
+currentMinutesAdd.innerHTML = `${currentMinutes}`;
 if (currentMinutes < 10){
   currentMinutes = `0 &{currentMinutes}`;
 }
-currentMinutesAdd.innerHTML = `${currentMinutes}`;
-
 }
 daysAndTime();
 
