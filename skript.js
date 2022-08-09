@@ -32,46 +32,57 @@ daysAndTime();
 
 
 // Forecast Weather 7 days
-function displayForecast(){
-  let forecastElement = document.querySelector("#forecast");
-  let days = ["Sunday",
-  "Monday",
-  "Tuersday",
-  "Wednesday",
-  "Thusday",
-  "Friday",
-  "Saturday"];
+function formatDay(timestamp){
+  let date = new Date(timestamp *1000);
+  let day = date.getDay();
+  let days = ["Sunday", "Monday", "Tuersday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  return days[day];
+}
 
+
+function displayForecast(response){
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<ul class="day">`;
-  days.forEach(function(day) {
+  forecast.forEach(function(forecastDay, index) {
+    if(index<5){
+
     forecastHTML=  
     forecastHTML + 
     `
     <li class="forecast-day">
 
-    <span class = "forecast-day"> ${day} </span>
+    <span class = "forecast-day"> ${formatDay(forecastDay.dt)} </span>
 
     <span class="weather-forecast-temperatures">
-    <span class="weather-forecast-temperature-max"> 18° </span>
+    <span class="weather-forecast-temperature-max"> ${Math.round(
+      forecastDay.temp.max)}° </span>
     <span class="image">
      <img
-     src="http://openweathermap.org/img/wn/50d@2x.png"
+     src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
      alt=""
      width="35"
    />
    </span>
-   <span class="weather-forecast-temperature-min"> 12° </span>
+   <span class="weather-forecast-temperature-min">  ${Math.round(
+    forecastDay.temp.min)}° </span>
    </span>
     </li>
     `;
-   });
-
+   }
+  }
+   )
+  
   forecastHTML = forecastHTML + `</ul>`;
-
   forecastElement.innerHTML = forecastHTML;
-  console.log(forecastHTML);
 }
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "b77049e9691e8c2e289bf38fe27ce568";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 
 
 
@@ -102,6 +113,7 @@ function searchInputWeather(response) {
   iconElement.setAttribute(
     "alt", response.data.weather[0].description
   )
+  getForecast(response.data.coord);
 }
 
 function searchCityName(cityName) {
