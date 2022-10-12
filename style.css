@@ -10,7 +10,8 @@
     
   }
   .container-fovorite-city {
-    width: 400px;
+    width: 90%;
+    text-align: center;
   }
   .col:hover {
     cursor: pointer;
@@ -97,7 +98,7 @@
 
 
   .enter-your-city {
-    width: 40%;
+    width: 50%;
     margin-right: 10px;
     border-radius: 60px;
     padding: 5px 15px;
@@ -107,7 +108,7 @@
     margin: 0 5px;
     border-radius: 60px;
     border: 2px solid rgba(0, 0, 0, 0.616);
-    padding: 3px 10px;
+    padding: 3px 30px;
     font-size: 18px;
     background: rgba(233, 186, 255, 0.078);
   }
