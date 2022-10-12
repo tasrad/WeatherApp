@@ -1,11 +1,11 @@
 .weather-app {
-    border: 1px solid black;
+    border: 1px solid rgba(233, 186, 255, 0.152);
     border-radius: 20px;
     display: block;
     max-width: 800px;
-    margin: 50px auto 5px auto;
-    padding: 20px 20px 20px 20px;
-     background: rgba(205, 216, 222, 0.644);
+    margin: 20px auto 5px auto;
+    padding: 40px 20px 40px 20px;
+     background: rgba(233, 186, 255, 0.152);
     box-shadow: 5px 5px 10px #f9fbfc;
     
   }
@@ -109,7 +109,7 @@
     border: 2px solid rgba(0, 0, 0, 0.616);
     padding: 3px 10px;
     font-size: 18px;
-    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    background: rgba(233, 186, 255, 0.078);
   }
   .button:hover {
     cursor: pointer;
@@ -123,7 +123,7 @@
 
   #temp-celsius.active,
   #temp-fahrenheit.active {
-color: blueviolet;
+color: rgb(169, 0, 248);
 cursor: default;
 
 
@@ -140,6 +140,7 @@ cursor: default;
   text-align: left;
 }  
 .link-to-github{
+  color: rgb(169, 0, 248);
   text-decoration: none;
 }
 
