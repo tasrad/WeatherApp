@@ -18,14 +18,14 @@ let currentHoursAdd = document.querySelector("#current-hour");
 
 currentHoursAdd.innerHTML = `${currentHours}`;
 if (currentHours < 10){
-  currentHours = `0 &{currentHours}`
+  currentHours = `0${currentHours}`;
 };
 let currentMinutes = now.getMinutes();
 let currentMinutesAdd = document.querySelector("#current-minutes");
 
 currentMinutesAdd.innerHTML = `${currentMinutes}`;
 if (currentMinutes < 10){
-  currentMinutes = `0 &{currentMinutes}`;
+  currentMinutes = `0${currentMinutes}`;
 }
 }
 daysAndTime();
